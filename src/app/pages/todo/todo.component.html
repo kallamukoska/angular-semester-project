@@ -1,0 +1,51 @@
+<div>
+    <div class="app-header">
+        <div class="container">
+            <h4>Manage Todos</h4>
+            <div class="header-button-container">
+                <button type="button" id="open" (click)="statusOpen()">OPEN</button>
+                <button type="button" id="progress" (click)="statusProgress()">PROGRESS</button>
+                <button type="button" id="testing" (click)="statusTesting()">TESTING</button>
+                <button type="button" id="done" (click)="statusDone()">DONE</button>
+                <button type="button" id="all" (click)="statusAll()">ALL</button>
+            </div>
+            <div>
+                <button class="todo-button" (click)="openSlidePanel()">+ Add Todo</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="todo-list">
+        <div *ngFor="let item of todos; let i = index">
+            <div *ngIf="item.isVisible">
+                <app-todo-card class="todo-item" [type]="item.status" [todo]="item"></app-todo-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-slide-panel style="font-weight: bold; font-size: 20px; color: green;" [headerText]="'Todo Details'" [isOpen]="isSlidePanelOpen" (onClose)="onCloseSlidePanel()">
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" autocomplete="off" novalidate class="side-panel">
+        <div>
+            <p style="color: black; font-size: 15px;">Title: </p>
+            <input type="text" id="title" placeholder="Title" formControlName="title">
+            <p style="color: black; font-size: 15px;">Description: </p>
+            <textarea rows="10" placeholder="Description" formControlName="description"></textarea>
+
+            <label for="status" style="color: black; font-size: 15px;">Status</label>
+            <select formControlName="status">
+              @for (item of todoStatus; track $index) {
+                <option [value]="item">{{item}}</option>
+              }
+            </select>
+
+        </div>
+        <div class="button-container">
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="button" (click)="onCloseSlidePanel()" class="cancel-button">Cancel</button>
+        </div>
+    </form>
+</app-slide-panel>
+
+

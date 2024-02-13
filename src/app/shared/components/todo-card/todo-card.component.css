@@ -1,0 +1,39 @@
+.app-header {
+    color: darkgreen; 
+    padding: 9px 130px; 
+    font-weight: bold;
+    text-align: right;
+    font-size: 16px;
+}
+
+.app-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-button:hover {
+    background-color: lightyellow;
+    color: darkgreen;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.todo-item {
+    position: relative;
+}
+
+.open-word {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+  

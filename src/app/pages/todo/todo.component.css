@@ -1,0 +1,148 @@
+.app-header {
+    color: darkgreen; 
+    padding: 9px 130px; 
+    font-weight: bold;
+    text-align: right;
+    font-size: 16px;
+}
+
+.app-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.todo-button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: lightseagreen;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+.todo-button:hover {
+    background-color: lightyellow;
+    color: darkgreen;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.todo-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 50px); 
+    display: inline-block;
+}
+
+.todo-item:hover {
+    background-color: lightgray;
+}
+
+.open-word {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+  
+.side-panel .flex {
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+
+.side-panel input[type="text"],
+.side-panel input[type="number"],
+.side-panel input[type="email"],
+.side-panel textarea {
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    width: 94%; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: left;
+    padding-top: 80px;
+}
+
+.submit-button,
+.cancel-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.submit-button:hover,
+.cancel-button:hover {
+    filter: brightness(0.8);
+}
+
+select {
+    padding: 10px; 
+    font-size: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #fff; 
+    cursor: pointer; 
+    outline: none; 
+    width: 100%; 
+}
+
+.header-button-container {
+    display: flex;
+    gap: 10px; 
+}
+
+.header-button-container button {
+    padding: 10px 20px; 
+    background-color: burlywood;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-button-container  :hover {
+    background-color: gray;
+}
+
+  
+  
+
+

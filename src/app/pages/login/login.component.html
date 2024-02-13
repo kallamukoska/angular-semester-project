@@ -1,0 +1,14 @@
+<div class="login-container">
+    <div>
+        <form>
+            <h2 class="login-heading">Login Here</h2>
+            <div class="login-text">Email Address<br>
+            <input type="text" placeholder="Email Address" formControlName="email">
+            </div>
+            <div class="login-text">Password<br>
+            <input type="password" placeholder="Password" minlength="8" formControlName="password">
+            </div>
+            <button type="submit" class="login-button" (click)="login()" >Submit</button>
+        </form>
+    </div>
+</div>

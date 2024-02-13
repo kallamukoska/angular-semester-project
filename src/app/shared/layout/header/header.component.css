@@ -1,0 +1,13 @@
+.app-header {
+    background-color: darkseagreen; 
+    color: darkslategrey;
+    padding: 9px 130px; 
+    font-weight: bold;
+    font-size: large;
+}
+
+.app-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
